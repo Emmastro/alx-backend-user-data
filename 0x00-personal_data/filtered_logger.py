@@ -11,7 +11,10 @@ from os import getenv
 PII_FIELDS = ('name', 'password', 'phone', 'ssn', 'email')
 
 
-def filter_datum(fields: List[str], redaction: str, message: str, separator: str) -> str:
+def filter_datum(
+        fields: List[str],
+        redaction: str, message: str, separator: str
+        ) -> str:
     """returns the log message obfuscated"""
 
     for i in fields:
