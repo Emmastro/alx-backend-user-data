@@ -66,6 +66,7 @@ def get_db() -> mysql.connector.connection.MySQLConnection:
 
 
 def main():
+    """Main function handle user data"""
     my_db = get_db()
     cursor = my_db.cursor()
     cursor.execute("SELECT * FROM users;")
